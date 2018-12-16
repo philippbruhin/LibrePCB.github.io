@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB Blog</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="https://librepcb.discourse.group" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+
+    <div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-12-03_aisler_supports_librepcb/">AISLER Supports LibrePCB Projects</a></h2>
+            
+              <p class="lead">
+                
+
+<p>We are very happy to announce that
+<a href="https://aisler.net/partners/librepcb">AISLER now supports LibrePCB projects</a>,
+so you can upload and review LibrePCB projects directly on their website and
+order PCBs and stencils just with a few clicks! :-)</p>
+
+<p><a href="/img/aisler_demo_brushless_controller.png"><img src="/img/aisler_demo_brushless_controller.png" alt="LibrePCB Project at AISLER" /></a></p>
+
+<h3 id="why-aisler">Why AISLER?</h3>
+
+<p>AISLER, based in Netherlands, is a smart prototyping service for electronics.
+They provide PCBs, stencils and parts for electronic projects for an affordable
+price, and everything is made in Germany.</p>
+
+<p>I met Felix and Patrick, the founders of AISLER, at
+<a href="https://archive.fosdem.org/2018/">FOSDEM 2018</a>. Patrick held the talk
+<a href="https://archive.fosdem.org/2018/schedule/event/cad_dr_format/">Proposal for an open and democratic Design Rule format</a>
+and I gave an <a href="https://archive.fosdem.org/2018/schedule/event/cad_librepcb/">Introduction to LibrePCB</a>.
+It turned out that we all have very similar opinions how development and
+manufacturing of electronics could (and should) be improved. We all are trying
+to bring EDA to a next level, for that reason they founded AISLER and I started
+the LibrePCB project.</p>
+
+<p>At FOSDEM Felix and Patrick offered me to integrate support for LibrePCB project
+files into their website, to allow ordering PCBs by uploading LibrePCB projects.
+And even more: For every order of an uploaded LibrePCB project they make a
+donation to support the LibrePCB development!</p>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>To make this happen, I created the <a href="https://docs.librepcb.org/#cli">LibrePCB CLI</a>
+which allows to automate the processing of LibrePCB projects. AISLER now uses
+that CLI to automatically generate Gerber files of an uploaded LibrePCB project.
+These Gerber files are then used to create the preview of the PCB, and to
+manufacture it in their fab.</p>
+
+<p><img src="/img/aisler_analyzing_librepcb_project.png" alt="Analyzing LibrePCB Project" /></p>
+
+<p>In order to adjust the fabrication output settings (e.g. filenames) according
+their needs, they patch the board file <code>boards/&lt;BOARDNAME&gt;/board.lp</code> with their
+own settings. So you don&rsquo;t have to make any fabrication output settings by
+yourself, they will be overwritten anyway.</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>As you may know already, LibrePCB allows to have multiple boards in one project.
+Currently it&rsquo;s not possible to select the specific board you want to order, so
+you will get an error when uploading a project with multiple boards. We will try
+to fix this limitation, but in the meantime you could manually adjust the
+project&rsquo;s file <code>boards/boards.lp</code> to remove all boards except the one you want
+to order ;)</p>
+
+<p>In addition, currently you have to manually create a ZIP archive containing the
+project directory, and upload that ZIP afterwards. I started to work on a
+solution to make this much easier.</p>
+
+<p>Also it&rsquo;s not yet possible for AISLER to export the BOM directly from the
+uploaded project because BOM export is still missing in LibrePCB. But you can
+still order parts at AISLER by uploading a CSV file with all parts.</p>
+
+<h3 id="try-it">Try it!</h3>
+
+<p>Just ZIP and upload your LibrePCB project to <a href="https://aisler.net/">aisler.net</a>
+to see the beautiful preview and to order the PCB :) It would be awesome if you
+order PCBs at AISLER as this way you directly support the development of
+LibrePCB!</p>
+
+<p>Many thanks to Felix and Patrick from AISLER to make this happen, and for
+supporting LibrePCB and other open source projects!</p>
+
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="point">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-11-25_release_0.1.0/">LibrePCB 0.1.0 Released</a></h2>
+            
+              <p class="lead">
+                
+
+<p><strong>The stable release 0.1.0 is out!</strong></p>
+
+<p>Since the release candidate 0.1.0 RC2 three weeks ago, no critical bugs were
+reported, so we decided to finally publish the stable release 0.1.0. The
+changelog compared to 0.1.0 RC2 is very short:</p>
+
+<h3 id="changelog">Changelog</h3>
+
+<h4 id="library-editor">Library Editor:</h4>
+
+<ul>
+<li>Fix saving of library URL</li>
+<li>Fix saving of component property &ldquo;schematic-only&rdquo;</li>
+</ul>
+
+<h3 id="file-format-stability">File Format Stability</h3>
+
+<p>As this is an official stable release, the file format is also considered as
+stable and you can expect that any project created with that release will be
+loadable with future releases of LibrePCB. So now you can really start using
+LibrePCB productively :)</p>
+
+<p><strong><em>Attention:</em></strong> <em>This is not the case for the development version (e.g. the
+<code>master</code> branch of our Git repository), so you should really use this official
+release for productive work instead of the development version!</em></p>
+
+<h3 id="download">Download</h3>
+
+<p>The release can be downloaded for all major operating systems at our download
+page:</p>
+
+<h4 id="https-librepcb-org-download"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-11-04_release_0.1.0-rc2/">LibrePCB 0.1.0 RC2 Released</a></h2>
+            
+              <p class="lead">
+                
+
+<p>After two weeks of testing, we have a new release candidate ready with some
+bugfixes and usability improvements:</p>
+
+<h3 id="changelog">Changelog</h3>
+
+<h4 id="control-panel">Control Panel:</h4>
+
+<ul>
+<li>Hide non-existent recent and favorite projects</li>
+<li>Hide debug tools in workspace settings dialog</li>
+</ul>
+
+<h4 id="library-manager">Library Manager:</h4>
+
+<ul>
+<li>Don&rsquo;t show 100% progress while extracting ZIP</li>
+</ul>
+
+<h4 id="library-editor">Library Editor:</h4>
+
+<ul>
+<li>Fix saving of component symbol position/rotation
+(<a href="https://github.com/LibrePCB/LibrePCB/issues/356">#356</a>)</li>
+</ul>
+
+<h4 id="schematic-editor">Schematic Editor:</h4>
+
+<ul>
+<li>Fix resizing of &ldquo;Add Component&rdquo; dialog caused by long device names</li>
+</ul>
+
+<h4 id="board-editor">Board Editor:</h4>
+
+<ul>
+<li>Fix crash when trying to connect trace to pad without net</li>
+<li>Fix too high default width of the dock widget at the right</li>
+<li>Fix possibly hidden layers in footprint preview of the &ldquo;Place Devices&rdquo; dock</li>
+<li>Show warning in the &ldquo;Place Devices&rdquo; dock if no matching device found in
+library</li>
+<li>Set default board size to 100x80mm</li>
+<li>Set default grid interval to 0.635mm</li>
+</ul>
+
+<h4 id="miscellaneous">Miscellaneous:</h4>
+
+<ul>
+<li>Allow deselecting items while keeping other items selected
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/361">#361</a>)</li>
+<li>Add attribute units &ldquo;current&rdquo; and &ldquo;power&rdquo;</li>
+</ul>
+
+<h4 id="new-languages">New languages:</h4>
+
+<ul>
+<li>Esperanto (8% translated)</li>
+<li>Italian (20% translated)</li>
+</ul>
+
+<h3 id="download">Download</h3>
+
+<p>The release candidate can be downloaded for all major operating systems at our
+download page:</p>
+
+<h4 id="https-librepcb-org-download"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="point">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-10-21_release_0.1.0-rc1/">LibrePCB 0.1.0 RC1 Released</a></h2>
+            
+              <p class="lead">
+                
+
+<p><strong>Great news: Our first official release candidate is out! :-)</strong></p>
+
+<p>If you didn&rsquo;t try LibrePCB already, now is the time to start using (or at least
+testing) LibrePCB for your next projects – we would love to get your feedback!</p>
+
+<h3 id="project-status">Project Status</h3>
+
+<p>Please keep in mind that this is our very first release candidate, so you may
+encounter one or another bug or missing feature. Nevertheless, we think the
+application is in a very usable state now – you can download and create
+libraries, draw schematics, route multilayer PCBs and export Gerber files.
+Unfortunately features like DRC, BOM export or buses are not implemented yet,
+they will be provided in a future release.</p>
+
+<p>If you encounter bugs, we would be happy if you report them to
+<a href="https://github.com/LibrePCB/LibrePCB/issues">our issue tracker</a>. As it&rsquo;s only
+a release <em>candidate</em>, there is some time to fix the most critical issues until
+the first <em>stable</em> release.</p>
+
+<h3 id="file-format-stability">File Format Stability</h3>
+
+<p>Until now, we always communicated that the file format is not considered stable.
+Any change in the file format could break older projects, so generally it was
+not recommended to use LibrePCB productively.</p>
+
+<p>With this first release candidate we consider the file format to be stable,
+so any future release should be able to open libraries and projects created
+with this release candidate. Only if there is an extremely critical issue with
+the file format we may still do a breaking change before publishing the stable
+0.1.0 release – but that&rsquo;s very unlikely :)</p>
+
+<p><strong><em>ATTENTION:</em></strong> <em>The file format is only considered stable for official releases
+– any intermediate version (e.g. from nightly builds) may not be upgradeable in
+the next release! So if you already used our nightly builds (or other binaries
+built from the <code>master</code> branch), you have to switch to official releases now.
+Nightly builds must really not be used for productive work. See
+<a href="https://developers.librepcb.org/df/d30/doc_developers.html">developers information</a> and
+<a href="https://developers.librepcb.org/da/dbc/doc_release_workflow.html">release workflow documentation</a>
+for details.</em></p>
+
+<h3 id="libraries">Libraries</h3>
+
+<p>Our official and ready-to-use libraries can easily be installed with the library
+manager integrated in LibrePCB. But as these libraries currently only contain
+very few elements, we would be very happy to get pull requests
+<a href="https://github.com/LibrePCB-Libraries">at the corresponding repositories</a> to
+add much more elements!</p>
+
+<h3 id="download">Download</h3>
+
+<p>The release candidate can be downloaded for all major operating systems at our
+new download page:</p>
+
+<h4 id="https-librepcb-org-download"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+<p>Many thanks to all the contributors and sponsors making this release possible!
+It was hard work of more than five years to bring out this first release. We
+would really appreciate if you supported the development either with
+contributions or donations (e.g. at <a href="https://www.patreon.com/librepcb">Patreon</a>).
+Every dollar helps to keep this huge project alive ;-)</p>
+
+<p>And now: Happy testing! :-)</p>
+
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-09-15_status_update/">Status Update 2018-09-15</a></h2>
+            
+              <p class="lead">
+                
+
+<p>The last blog post is already a few months ago, and many things happened in the
+meantime. Thus I would like to inform you about the current status of the
+project, what happened in past and what the next tasks are.</p>
+
+<h3 id="new-logo">New Logo</h3>
+
+<p>Our logo was originally downloaded from a free icon portal. Although it was
+legal (thanks to its permissive license), it&rsquo;s not a good idea to use a free
+icon as a logo. Because we didn&rsquo;t have the copyright on it, it was not
+guaranteed to be exclusively used by us (other projects could use the same icon
+too).</p>
+
+<p>As the <a href="https://github.com/LibrePCB/LibrePCB/issues/6">corresponding issue</a> was
+unresolved for more than three years (it was our 6th issue!), we decided to
+start a <a href="http://99d.me/c/iab2">design contest at 99designs</a> to get a new logo.
+And here&rsquo;s the winning design:</p>
+
+<p><img src="/img/new_logo.png" alt="New Logo" /></p>
+
+<p>Sure, it&rsquo;s quite similar to the old logo, just nicer ;-) Probably that&rsquo;s because
+I already liked the old logo, and maybe also a little bit because it was (too)
+hard for me to go with a completely different logo than the one we had for
+several years&hellip; Anyway, I hope you like the new logo as much as I do :)</p>
+
+<h3 id="latest-changes">Latest Changes</h3>
+
+<p>It would be too much to explain all the changes from the last months, thus here
+just a list of the most important pull requests merged:</p>
+
+<ul>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/254">Use Jinja-like attribute substitution syntax</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/255">Improve PCB fabrication output generator</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/258">Add ability to place NPTH drills on boards</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/260">Implement airwires (aka &ldquo;rats nests&rdquo;)</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/267">Provide installer for nightly builds</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/273">Use Transifex for translations</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/282">Bundle fonts used in schematics together with LibrePCB</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/299">Add command-line tool &ldquo;librepcb-cli&rdquo;</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/321">Refactor net segments concept and board/schematic editors</a></li>
+</ul>
+
+<p>The last one sounds innocent, but that&rsquo;s actually the change which (finally)
+made the board editor really usable (it fixed many annoying bugs).</p>
+
+<h3 id="next-steps">Next Steps</h3>
+
+<p>With all the changes from above, our
+<a href="https://github.com/LibrePCB/LibrePCB/milestone/1">milestone 0.1</a> is nearly
+complete. That means that we are now feature-complete for our first release!</p>
+
+<p>So you can expect the first official stable release very soon :-)</p>
+
+<p>The open tasks are now:</p>
+
+<ol>
+<li><a href="https://github.com/LibrePCB/LibrePCB/pull/326">Define a development and release workflow</a></li>
+<li><a href="https://github.com/LibrePCB/LibrePCB/issues/185">Prepare and test file format upgrade procedure</a></li>
+<li>Review the whole file format and make the last changes if needed</li>
+<li>Create and publish the first release!</li>
+</ol>
+
+<p>So, stay tuned :)</p>
+
+              </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="point">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-04-21_librepcb_meets_fontobene/">LibrePCB Meets FontoBene</a></h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2018-01-02_librepcb_at_fosdem_18/">LibrePCB Talk at FOSDEM 2018</a></h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="point">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2017-10-30_librepcb_has_switched_to_s_expressions/">LibrePCB Has Switched to S-Expressions</a></h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2><a href="http://librepcb.org/blog/2017-09-13_librepcb-has-a-blog/">LibrePCB Has a Blog! :-)</a></h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

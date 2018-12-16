@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>LibrePCB</title>
+    <link>http://librepcb.org/</link>
+    <description>Blog posts of LibrePCB, an Open Source EDA software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Sep 2015 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://librepcb.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is LibrePCB?</title>
+      <link>http://librepcb.org/post/about/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/about/</guid>
+      <description> LibrePCB is a free EDA software to develop printed circuit boards.
+Key Features:  Cross-platform (Unix/Linux, Mac OS X, Windows) All-in-one (project management, library/schematic/board editors) Intuitive, modern and easy-to-use graphical user interface Very powerful library design with some innovative concepts Human-readable file formats Open Source (GNU GPLv3)  Interested? Try it out! </description>
+    </item>
+    
+    <item>
+      <title>Control Panel</title>
+      <link>http://librepcb.org/post/control_panel/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/control_panel/</guid>
+      <description>The control panel gives you fast access to all of your projects, especially to recently used and favorite projects. It also shows you the description of projects without opening them, if available. Just create a README.md inside your project&amp;rsquo;s directory!</description>
+    </item>
+    
+    <item>
+      <title>Schematic Editor</title>
+      <link>http://librepcb.org/post/schematic_editor/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/schematic_editor/</guid>
+      <description>The schematic editor is very easy to use and still powerful. Thanks to the innovative library concept, you don&amp;rsquo;t have to worry about choosing footprints while drawing the schematic. In contrast to other EDA tools, you also don&amp;rsquo;t have to worry about manually assigning symbol pins to footprint pads later in the board editor.</description>
+    </item>
+    
+    <item>
+      <title>Board Editor</title>
+      <link>http://librepcb.org/post/board_editor/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/board_editor/</guid>
+      <description>Ever struggled in the middle of layouting if you need to relocate some devices before continue routing the traces? LibrePCB&amp;rsquo;s board editor just lets you fork your half-done layout to continue with two different layouting strategies! Of course all of the existing boards are always in sync with the schematics.</description>
+    </item>
+    
+    <item>
+      <title>Library Browser</title>
+      <link>http://librepcb.org/post/library_browser/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/library_browser/</guid>
+      <description>When adding components to the schematic, most EDA tools let you choose them from a simple list of the installed libraries (often named by manufacturer). LibrePCB thinks this is a stupid system and thus lets you choose your components from a tree of categories instead, no matter which library provides them.</description>
+    </item>
+    
+    <item>
+      <title>Library Manager</title>
+      <link>http://librepcb.org/post/library_manager/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/library_manager/</guid>
+      <description>Managing libraries has never been easier than with LibrePCB&amp;rsquo;s library manager. It downloads, installs and updates libraries directly from the internet. No more need to do this manually.</description>
+    </item>
+    
+    <item>
+      <title>Sponsors</title>
+      <link>http://librepcb.org/post/sponsors/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/sponsors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AISLER Supports LibrePCB Projects</title>
+      <link>http://librepcb.org/blog/2018-12-03_aisler_supports_librepcb/</link>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-12-03_aisler_supports_librepcb/</guid>
+      <description>We are very happy to announce that AISLER now supports LibrePCB projects, so you can upload and review LibrePCB projects directly on their website and order PCBs and stencils just with a few clicks! :-)
+
+Why AISLER? AISLER, based in Netherlands, is a smart prototyping service for electronics. They provide PCBs, stencils and parts for electronic projects for an affordable price, and everything is made in Germany.
+I met Felix and Patrick, the founders of AISLER, at FOSDEM 2018.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 Released</title>
+      <link>http://librepcb.org/blog/2018-11-25_release_0.1.0/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-11-25_release_0.1.0/</guid>
+      <description>The stable release 0.1.0 is out!
+Since the release candidate 0.1.0 RC2 three weeks ago, no critical bugs were reported, so we decided to finally publish the stable release 0.1.0. The changelog compared to 0.1.0 RC2 is very short:
+Changelog Library Editor:  Fix saving of library URL Fix saving of component property &amp;ldquo;schematic-only&amp;rdquo;  File Format Stability As this is an official stable release, the file format is also considered as stable and you can expect that any project created with that release will be loadable with future releases of LibrePCB.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 RC2 Released</title>
+      <link>http://librepcb.org/blog/2018-11-04_release_0.1.0-rc2/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-11-04_release_0.1.0-rc2/</guid>
+      <description>After two weeks of testing, we have a new release candidate ready with some bugfixes and usability improvements:
+Changelog Control Panel:  Hide non-existent recent and favorite projects Hide debug tools in workspace settings dialog  Library Manager:  Don&amp;rsquo;t show 100% progress while extracting ZIP  Library Editor:  Fix saving of component symbol position/rotation (#356)  Schematic Editor:  Fix resizing of &amp;ldquo;Add Component&amp;rdquo; dialog caused by long device names  Board Editor:  Fix crash when trying to connect trace to pad without net Fix too high default width of the dock widget at the right Fix possibly hidden layers in footprint preview of the &amp;ldquo;Place Devices&amp;rdquo; dock Show warning in the &amp;ldquo;Place Devices&amp;rdquo; dock if no matching device found in library Set default board size to 100x80mm Set default grid interval to 0.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 RC1 Released</title>
+      <link>http://librepcb.org/blog/2018-10-21_release_0.1.0-rc1/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-10-21_release_0.1.0-rc1/</guid>
+      <description>Great news: Our first official release candidate is out! :-)
+If you didn&amp;rsquo;t try LibrePCB already, now is the time to start using (or at least testing) LibrePCB for your next projects – we would love to get your feedback!
+Project Status Please keep in mind that this is our very first release candidate, so you may encounter one or another bug or missing feature. Nevertheless, we think the application is in a very usable state now – you can download and create libraries, draw schematics, route multilayer PCBs and export Gerber files.</description>
+    </item>
+    
+    <item>
+      <title>Status Update 2018-09-15</title>
+      <link>http://librepcb.org/blog/2018-09-15_status_update/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-09-15_status_update/</guid>
+      <description>The last blog post is already a few months ago, and many things happened in the meantime. Thus I would like to inform you about the current status of the project, what happened in past and what the next tasks are.
+New Logo Our logo was originally downloaded from a free icon portal. Although it was legal (thanks to its permissive license), it&amp;rsquo;s not a good idea to use a free icon as a logo.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Meets FontoBene</title>
+      <link>http://librepcb.org/blog/2018-04-21_librepcb_meets_fontobene/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-04-21_librepcb_meets_fontobene/</guid>
+      <description>Finally! LibrePCB has a fully functional stroke font which can be used on PCBs. So now you can place designators or other text items on silkscreen (or other layers) which of course are then exported into the generated Gerber files. The new font file format FontoBene was developed especially for LibrePCB.
+
+Why a stroke font instead of OTF/TTF? It may sound strange to implement a primitive stroke font in 2018 when we actually have much more powerful TrueType and OpenType fonts since many years.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Talk at FOSDEM 2018</title>
+      <link>http://librepcb.org/blog/2018-01-02_librepcb_at_fosdem_18/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-01-02_librepcb_at_fosdem_18/</guid>
+      <description>The Free and Open Source Software Developers&amp;rsquo; European Meeting (FOSDEM) is a great event for developers and users interested in free software. It is hosted at the ULB Solbosch Campus in Brussels, Belgium. This year it takes place on February 3 / 4.
+
+There are many different tracks available, but for us the most interesting one is the CAD and Open Hardware devroom. It contains talks about PCB design, FPGA design, SPICE simulation and open hardware in general.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Has Switched to S-Expressions</title>
+      <link>http://librepcb.org/blog/2017-10-30_librepcb_has_switched_to_s_expressions/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2017-10-30_librepcb_has_switched_to_s_expressions/</guid>
+      <description>One major goal of LibrePCB is to use human readable files to represent libraries, projects and so on. This is important to let the user understand what the EDA tool actually does when modifying a schematic or board. In addition, a good file format is essential for version control systems to keep track of changes in libraries and projects.
+But LibrePCB doesn&amp;rsquo;t just want to have some human readable file format.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Has a Blog! :-)</title>
+      <link>http://librepcb.org/blog/2017-09-13_librepcb-has-a-blog/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2017-09-13_librepcb-has-a-blog/</guid>
+      <description>Here it is: The long awaited blog of LibrePCB!
+It&amp;rsquo;s still very basic, but this will be improved some time ;)
+From now on, we will use this blog to provide various information, e.g. announcements of upcoming events, release notes, development progress or technical explanations.
+If you have any input regarding this blog or our website in general, please open an issue on the GitHub repository.</description>
+    </item>
+    
+    <item>
+      <title>Comparison with other EDA tools</title>
+      <link>http://librepcb.org/compare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/compare/</guid>
+      <description>Of course people compare LibrePCB to other EDA tools, especially Eagle and KiCad. To help you deciding which EDA tool is best for your needs, here a short overview about the differences between LibrePCB and other EDA tools.
+Library Concept One major advantage of LibrePCB is the powerful library concept. See this talk at FOSDEM (slides here) for details.
+LibrePCB vs. Eagle  LibrePCB is free of charge – without limitations, even for commercial usage LibrePCB has an integrated library manager, thus it&amp;rsquo;s much easier to install and update libraries LibrePCB library and project files are better suited for version control The schematic- and board editors of Eagle are currently more powerful (LibrePCB does not yet support hierarchical sheets, DRC, BOM export, 3D view and more)  LibrePCB vs.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Downloads</title>
+      <link>http://librepcb.org/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/download/</guid>
+      <description>Here you can download official LibrePCB releases.
+Please read the Getting Started Guide for installation and usage instructions.
+ Windows  Download LibrePCB Installer for Windows Alternative: Portable ZIP (extract &amp;amp; run)
+ Linux  Download LibrePCB Installer for Linux Alternatives for various distributions: Flatpak or AppImage (set executable flag &amp;amp; run)
+Arch Linux: librepcb (builds from source) or librepcb-appimage (downloads binary)
+OpenPandora: librepcb from OpenPandora Repository
+NixOS: librepcb package</description>
+    </item>
+    
+    <item>
+      <title>Thank you!</title>
+      <link>http://librepcb.org/donate/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/donate/thanks/</guid>
+      <description>Thank you very much for supporting us to create better PCB design software for everyone! Your donation helps to keep the development ongoing, making LibrePCB more and more powerful.</description>
+    </item>
+    
+  </channel>
+</rss>
